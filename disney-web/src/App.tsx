@@ -20,14 +20,16 @@ function App() {
         <Link to="/usuario">Usuario</Link>
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/favoritos" element={<Favoritos />} />
-        <Route path="/original" element={<Original />} />
-        <Route path="/informativa" element={<Informativa />} />
-        <Route path="/usuario" element={<Usuario />} />
-        <Route path="/character/:id" element={<Character />} />
-      </Routes>
+      <div className="page-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favoritos" element={<Favoritos />} />
+          <Route path="/original" element={<Original />} />
+          <Route path="/informativa" element={<Informativa />} />
+          <Route path="/usuario" element={<Usuario />} />
+          <Route path="/character/:id" element={<Character />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

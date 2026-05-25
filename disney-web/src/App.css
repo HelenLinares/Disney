@@ -20,13 +20,18 @@ html, body, #root {
 
 .menu {
   display: flex;
-  flex-wrap: wrap; /* Permite que los items bajen si no hay espacio */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #0c1e3f, #1e3c72);
   padding: 10px;
   width: 100%;
   gap: 10px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .menu a {
@@ -36,7 +41,7 @@ html, body, #root {
   text-decoration: none;
   color: white;
   font-size: 12px;
-  min-width: 65px; /* Evita que se compriman demasiado */
+  min-width: 65px;
   transition: transform 0.2s;
 }
 
@@ -48,6 +53,11 @@ html, body, #root {
 
 .menu a:hover {
   transform: scale(1.1);
+}
+
+.page-content {
+  width: 100%;
+  min-height: calc(100vh - 60px);
 }
 
 @media (max-width: 600px) {
